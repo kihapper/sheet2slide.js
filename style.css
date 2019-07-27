@@ -5,16 +5,17 @@
 }
 
 body{
-font-family: "Bluu Next"; Times New Roman;
+/* font-family: "Bluu Next"; Times New Roman;*/
+
+font-family: 'Volkhov', serif;
 font-size: 24px;
-line-height: 1.2;
+line-height: 1.4;
 color: black;
 
 height:100vh;
 
-
 background-color: #edc7a9;
-background-image: linear-gradient(180deg, #ffffff, rgba(255,255,255,0));
+background-image: linear-gradient(180deg, rgba(255,255,255,0) , #ffffff);
 
 /* Change background animation here*/
 transition: background-color 0.5s;
@@ -22,12 +23,19 @@ transition: background-color 0.5s;
 
 
 h1{
-    font-size: 5vmin;
+    font-size: 4vmin;
 }
 
+
 h2{
-    font-size: 12vmin;
+    font-size: 8vmin;
+    text-indent : -0.5em;
 }
+
+h2.long{
+    font-size: 6vmin;
+}
+
 
 section{
     position : fixed;
@@ -36,7 +44,7 @@ section{
     /* To Make sure it's centered */
     transform : translate(-50%, -50%);
     width : 70%;
-    text-align: center;
+    text-align: left ;
 }
 
 
