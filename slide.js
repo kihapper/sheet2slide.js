@@ -3,14 +3,23 @@
 
 
 let pageNumber = 0;
-const pages =[
-    { copy:"Hello people my name is Tomo", background:"#edc7a9" , circle:"#3e78ed" },
-    { copy:"Kanye is Weeest", background:"#a1fffe" , circle:"#e34a47"},
-    { copy:"I loveloveloveyou", background:"#d3c7f3" , circle:"#f7fe00"},
-    { copy: "Sec and sexy you", background:"#edc7a9" , circle:"#3e78ed"}
-]
 
 
+//——————Fetching JSON data ———————
+
+let dataset = [];
+
+fetch("textdata.json").then(function(response){
+    return response.json();
+}).then (function(jsonData){
+    console.log(jsonData);
+    dataset = jsonData;
+    updateSection();
+})
+
+
+
+const importTag = document.querySelector("h1");
 const outputTag = document.querySelector("h2");
 const pagenumTag = document.querySelector("div.pagenum");
 const nextTag = document.querySelector("img.next");
@@ -34,22 +43,40 @@ randomTag.addEventListener("click",function(){
 
 
 
-const randomChange = function(){
-    pageNumber = Math.floor(Math.random() * pages.length);
-    updateSection();
+const tagImport =() =>{
+
+    if(dataset.length > 0){
+    }
+
+    importTag.innerHTML = "Loading script from outside" + Math.random();
 }
 
-const next = function (){
+//Make sure to update everything here.
+const updateSection= () => {
+    pagenumTag.innerHTML = pageNumber + "/" + dataset.length;
+    outputTag.innerHTML = dataset[pageNumber].copy;
+    circleTag.style.backgroundColor =  dataset[pageNumber].circle;
+    bodyTag.style.backgroundColor =  dataset[pageNumber].background;
+    tagImport();
+}
+
+
+
+
+//——————— Change Script —————————//
+
+
+const next = () => {
     pageNumber = pageNumber + 1;
 
-    if(pageNumber > pages.length){
+    if(pageNumber > dataset.length){
         pageNumber = 0;
        }
 
     updateSection();
 }
 
-const previous = function(){
+const previous = () => {
     pageNumber = pageNumber - 1;
 
     if(pageNumber < 1){
@@ -58,14 +85,13 @@ const previous = function(){
     updateSection();
 }
 
-
-const updateSection= function(){
-    pagenumTag.innerHTML = pageNumber + "/" + pages.length;
-    outputTag.innerHTML = pages[pageNumber].copy;
-    circleTag.style.backgroundColor =  pages[pageNumber].circle;
-    bodyTag.style.backgroundColor =  pages[pageNumber].background;
-
+const randomChange = () => {
+    pageNumber = Math.floor(Math.random() * dataset.length);
+    updateSection();
 }
+
+
+//——————— Key Change Script —————————//
 
 
 document.addEventListener("keyup",function(keyis){
@@ -82,4 +108,5 @@ if(keyis.key == "ArrowLeft"){
 
 })
 
-updateSection();
+//——————— Initialise —————————//
+
