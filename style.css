@@ -1,0 +1,96 @@
+
+@font-face{
+    font-family: "Bluu Next";
+    src: url(assets/bluunext.woff), url(assets/bluunext.woff2);
+}
+
+body{
+font-family: "Bluu Next"; Times New Roman;
+font-size: 24px;
+line-height: 1.2;
+color: black;
+
+height:100vh;
+
+
+background-color: #edc7a9;
+background-image: linear-gradient(180deg, #ffffff, rgba(255,255,255,0));
+
+transition: background-color 0.5s;
+}
+
+
+h1{
+    font-size: 5vmin;
+}
+
+h2{
+    font-size: 12vmin;
+}
+
+section{
+    position : fixed;
+    top: 50%;
+    left:50%;
+    transform : translate(-50%, -50%);
+    width : 60%;
+    text-align: center;
+}
+
+
+section div.circle{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color: aqua;
+    border-radius: 50%;
+
+    transition: background-color 0.5s;
+}
+
+footer{
+    position : fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-bottom: 30px;
+    cursor: grab;
+}
+
+footer img{
+    margin:0 10px 0 10px;
+}
+
+.pagenum{
+    position : fixed;
+    top: 0;
+    left: 0;
+    padding-top: 30px;
+    padding-left: 30px;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.appear {
+    opacity: 0;
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-delay: 0.2s;
+
+    /*Image in body layer doesn't work*/
+    /* By setting it forward it sets opacity 0 here as a starting point */
+    animation-fill-mode: forwards;
+}
