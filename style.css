@@ -7,15 +7,15 @@
 body{
 /* font-family: "Bluu Next"; Times New Roman;*/
 
-font-family: 'Volkhov', serif;
+font-family: 'Crimson Pro', serif;
 font-size: 24px;
 line-height: 1.4;
 color: black;
 
 height:100vh;
 
-background-color: #edc7a9;
-background-image: linear-gradient(180deg, rgba(255,255,255,0) , #ffffff);
+background-color: white;
+background-image: linear-gradient(to bottom right, rgba(255,255,255,0) , #ffffff);
 
 /* Change background animation here*/
 transition: background-color 0.5s;
@@ -33,8 +33,10 @@ h2{
 }
 
 h2.long{
-    font-size: 6vmin;
+    font-size: 5vmin;
 }
+
+
 
 
 section{
@@ -52,7 +54,7 @@ section div.circle{
     display: inline-block;
     width: 20px;
     height: 20px;
-    background-color: aqua;
+    background-color:white;
     border-radius: 50%;
 
     transition: background-color 0.5s;
