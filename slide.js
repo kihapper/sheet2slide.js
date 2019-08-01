@@ -72,8 +72,8 @@ fetch(url)
 const updateSection= () => {
 
     pagenumTag.innerHTML = dataNumber + "/" + (googleSheet.length - 1);
-    maintextTag.innerHTML = "&ldquo;" + mainText[dataNumber] + "&rdquo;";
-    subtextTag.innerHTML =  subText[dataNumber] + " - page :  " +  numberText[dataNumber];
+    maintextTag.innerHTML = mainText[dataNumber];
+    subtextTag.innerHTML =  subText[dataNumber];
 
 
     if(mainText[dataNumber].length > 200){
@@ -92,7 +92,8 @@ const updateSection= () => {
     circleTag.style.backgroundColor =  `hsl(${color_random},100%,50%)`;
     bodyTag.style.backgroundColor =  `hsl(${color_random},100%,70%)`;
     maintextTag.style.color = `hsl(${color_random},50%,30%)`;
-    subtextTag.style.color = `hsl(${color_random},30%,30%)`;
+    subtextTag.style.color = `hsl(${color_random},50%,30%)`;
+    pagenumTag.style.color = `hsl(${color_random},50%,30%)`;
 
 }
 

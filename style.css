@@ -1,25 +1,8 @@
 
-@font-face{
-    font-family: "Bluu Next";
-    src: url(assets/bluunext.woff), url(assets/bluunext.woff2);
-}
 
-body{
-/* font-family: "Bluu Next"; Times New Roman;*/
+body{/* font-family: "Bluu Next"; Times New Roman;*/font-family: 'Crimson Pro', serif;font-size: 24px;line-height: 1.4;color: black;height:100vh;background-color: white;background-image: linear-gradient(to bottom right, rgba(255,255,255,0) , #ffffff);overflow: hidden;
 
-font-family: 'Crimson Pro', serif;
-font-size: 24px;
-line-height: 1.4;
-color: black;
-
-height:100vh;
-
-background-color: white;
-background-image: linear-gradient(to bottom right, rgba(255,255,255,0) , #ffffff);
-
-/* Change background animation here*/
-transition: background-color 0.5s;
-}
+/* Change background animation here*/transition: background-color 0.5s;}
 
 
 h1{
@@ -28,7 +11,7 @@ h1{
 
 
 h2{
-    font-size: 8vmin;
+    font-size: 7vmin;
     text-indent : -0.5em;
 }
 
@@ -36,7 +19,13 @@ h2.long{
     font-size: 5vmin;
 }
 
+a{
+  color:#383838	;
+}
 
+a:hover{
+  filter: blur(2px);
+}
 
 
 section{
@@ -44,9 +33,9 @@ section{
     top: 50%;
     left:50%;
     /* To Make sure it's centered */
-    transform : translate(-50%, -50%);
-    width : 70%;
-    text-align: left ;
+    transform : translate(-50%, -60%);
+    width : 75%;
+    text-align: center ;
 }
 
 
@@ -56,8 +45,17 @@ section div.circle{
     height: 20px;
     background-color:white;
     border-radius: 50%;
-
     transition: background-color 0.5s;
+}
+
+.pagenum{
+    position : fixed;
+    top: 0;
+    right: 0;
+    padding-top: 30px;
+    padding-right: 30px;
+    font-size: 4vmin;
+    opacity: 0.8 !important;
 }
 
 footer{
@@ -69,21 +67,32 @@ footer{
     justify-content: center;
     align-items: center;
 
-    padding-bottom: 30px;
-    cursor: grab;
+    padding-bottom: 50px;
+    cursor: pointer;
 }
 
 footer img{
-    margin:0 10px 0 10px;
+    margin:0 30px 0 30px;
+    height: 6vmin;  
+    opacity: 0.5; 
 }
 
-.pagenum{
-    position : fixed;
-    top: 0;
-    left: 0;
-    padding-top: 30px;
-    padding-left: 30px;
+.next:hover{
+    opacity: 0.8; 
+    filter: blur(2px);
 }
+
+.prev:hover{
+    opacity: 0.8; 
+    filter: blur(2px);
+}
+
+.random:hover{
+    opacity: 0.8; 
+    filter: blur(2px);
+}
+
+
 
 @keyframes fadeIn {
     0% {
