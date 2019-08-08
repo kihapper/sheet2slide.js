@@ -1,23 +1,52 @@
 
 
-body{/* font-family: "Bluu Next"; Times New Roman;*/font-family: 'Crimson Pro', serif;font-size: 24px;line-height: 1.4;color: black;height:100vh;background-color: white;background-image: linear-gradient(to bottom right, rgba(255,255,255,0) , #ffffff);overflow: hidden;
+body{
+    font-family: 'Crimson Pro', serif;
+    font-size: 24px;
+    line-height: 1.4;
+    color: black;height:100vh;
+    background-color: white;
+    background-image: linear-gradient(to bottom right, rgba(255,255,255,0) , #ffffff);
+    overflow: hidden;
+    transition: background-color 0.5s;
+}
 
-/* Change background animation here*/transition: background-color 0.5s;}
+
+section{
+    position : fixed;
+    top: 50%;
+    left:50%;
+    /* To Make sure it's centered */
+    transform : translate(-50%, -60%);
+    width : 80%;
+    text-align: center ;
+}
+
 
 
 h1{
-    font-size: 4vmin;
+    font-size: calc(1.5em + 1vw);
 }
 
+/* Section h2 changes size depending on the length of the text */
 
 h2{
-    font-size: 7vmin;
-    text-indent : -0.5em;
+    font-size: calc(2em + 1vw);
 }
 
+/* Long texts*/
+
 h2.long{
-    font-size: 5vmin;
+    font-size: calc(1.5em + 0.5vw);;
 }
+
+/* short texts*/
+
+h2.short{
+    font-size: calc(3em + 1vw);;
+}
+
+
 
 a{
   color:#383838	;
@@ -28,25 +57,6 @@ a:hover{
 }
 
 
-section{
-    position : fixed;
-    top: 50%;
-    left:50%;
-    /* To Make sure it's centered */
-    transform : translate(-50%, -60%);
-    width : 75%;
-    text-align: center ;
-}
-
-
-section div.circle{
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    background-color:white;
-    border-radius: 50%;
-    transition: background-color 0.5s;
-}
 
 .pagenum{
     position : fixed;
@@ -91,6 +101,38 @@ footer img{
     opacity: 0.8; 
     filter: blur(2px);
 }
+
+
+
+section div.circle{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-color:white;
+    border-radius: 50%;
+    transition: background-color 0.5s;
+}
+
+/* Border around the body tag */
+#top, #bottom, #left, #right {
+    background:transparent;
+    position: fixed;
+    transition: background-color 0.4s;
+
+	}
+	#left, #right {
+		top: 0; bottom: 0;
+		width: 20px;
+		}
+		#left { left: 0; }
+		#right { right: 0; }
+		
+	#top, #bottom {
+		left: 0; right: 0;
+		height: 20px;
+		}
+		#top { top: 0; }
+		#bottom { bottom: 0; }
 
 
 
