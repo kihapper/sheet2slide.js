@@ -1,5 +1,22 @@
 
 
+/*————Fetching Google Docs Sheet as JSON data ————
+
+1. Make Google Sheets
+2. Retrieve your Google Sheet Unique ID from your browser.
+    (example) In the link below it is "12f1k677L0LEDuZNvVRsycUUBLteeWyGcF9vA5anFWG0"
+    https://docs.google.com/spreadsheets/d/12f1k677L0LEDuZNvVRsycUUBLteeWyGcF9vA5anFWG0/edit#gid=0
+3. From [Files -> Publish to Web] pulish the sheet to web.
+4. Put your ID in the link format below to retrieve JSON data
+    https://spreadsheets.google.com/feeds/list/ YOUR ID GOES HERE /1/public/values?alt=json
+    (example)
+    https://spreadsheets.google.com/feeds/list/12f1k677L0LEDuZNvVRsycUUBLteeWyGcF9vA5anFWG0/1/public/values?alt=json
+5. Check if you can retrieve JSON data!
+Enjoy Coding ٩(ˊᗜˋ*)و 
+
+———— Any questions contact Tomo —— www.tomokihara.com ——— */
+
+
 // Getting HTML elements————————
 
 const subtextTag = document.querySelector("h1");
